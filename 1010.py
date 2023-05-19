@@ -22,3 +22,12 @@ for i in range(T):
         print(1)
     else:
         print(combinations(m[i], n[i]))
+
+# 콤비네이션 쉽게 구현하기
+
+#     for i in range(M, M-N,-1):
+#         a *= i
+    
+#     for j in range(N,1,-1):
+#         b *= j
+#     print(int(a/b))
