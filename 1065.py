@@ -10,3 +10,4 @@ for n in range(1, n+1) :
         nums = list(map(int, str(n)))
         if nums[0] - nums[1] == nums[1] - nums[2] :
             count+=1
+print(count)
