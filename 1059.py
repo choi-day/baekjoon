@@ -1,13 +1,19 @@
-l = int(input())
-
-s = sorted(list(map(int, input().split())))
+L = int(input())
+S = list(map(int,input().split()))
 n = int(input())
 
-if (n in s) or (n > s[len(s)-1] or n < s[0]):
+S.sort()
+
+if n in S:
     print(0)
 else:
-    for i in range(len(s)):
-        if (s[i] < n) and (n < s[i+1]):
-            k = i
-            break
-    print((n - s[k]) * (s[k+1] - n)-1)
+    min = 0
+    max = 0
+    for num in S:           
+        if num < n:     
+            min = num
+        elif num > n and max == 0:
+            max = num
+    max -= 1                 
+    min += 1
+    print((n-min)*(max-n+1) + (max-n))
