@@ -6,8 +6,9 @@ coustomer =  []
 for _ in range(m):
     coustomer.append(int(input()))
 coustomer = sorted(coustomer)
+
 if n < m:
-    coustomer = coustomer[m-n-1:m]
+    coustomer = coustomer[m-n:m]
 profit = []
 
 for i in coustomer:
