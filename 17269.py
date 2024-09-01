@@ -8,10 +8,10 @@ lest = ''
 
 if len(a) < len(b):
     lest = b[len(a)::]
-    b = b[0:len(a)-1]
-else:
+    b = b[0:len(a)]
+elif len(a) > len(b):
     lest = a[len(b)::]
-    a = a[0:len(b)-1]
+    a = a[0:len(b)]
 
 for i, j in zip(a,b):
     l.append(i)
@@ -27,8 +27,11 @@ for i in l:
 while(1):
     l3 = []
     if len(l2) == 2:
-        print(l2,'%')
+        if l2[0] == 0:
+            print(str(l2[1])+'%')
+        else:
+            print(str(l2[0])+str(l2[1])+'%')
         break
-    for i in range(0,len(l2)-1):
+    for i in range(0, len(l2)-1):
         l3.append((l2[i]+l2[i+1])%10)
     l2 = l3
